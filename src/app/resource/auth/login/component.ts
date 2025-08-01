@@ -14,6 +14,7 @@ export class LoginComponent {
   form: FormGroup;
   error = '';
   success = '';
+  showPassword = false;
 
   constructor(private fb: FormBuilder, private router: Router) { // <-- Inject Router
     this.form = this.fb.group({
