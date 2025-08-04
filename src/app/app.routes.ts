@@ -15,18 +15,20 @@ export const appRoutes: Routes = [
   },
   {
     path: 'admin',
+    loadComponent: () =>
+      import('./resource/admin/component').then(m => m.AdminLayoutComponent),
     children: [
       {
         path: 'dashboard',
         loadComponent: () =>
-          import('./resource/admin/dashboard/component').then((m) => m.DashboardComponent)
+          import('./resource/admin/dashboard/component').then(m => m.DashboardComponent)
       },
       {
         path: 'user',
         loadComponent: () =>
-          import('./resource/admin/user/component').then((m) => m.UserComponent)
+          import('./resource/admin/user/component').then(m => m.UserComponent)
       },
-           {
+      {
         path: 'survey',
         children: [
           {
@@ -39,19 +41,24 @@ export const appRoutes: Routes = [
             loadComponent: () =>
               import('./resource/admin/survey/create/component').then(m => m.CreateSurveyComponent)
           },
-         {
+          {
             path: 'view',
             loadComponent: () =>
               import('./resource/admin/survey/view/component').then(m => m.ViewSurveyComponent)
           }
-
         ]
       },
-       {
+      {
         path: 'setting',
         loadComponent: () =>
-          import('./resource/admin/setting/component').then((m) => m.SettingComponent)
+          import('./resource/admin/setting/component').then(m => m.SettingComponent)
+      },
+      {
+        path: 'profile',
+        loadComponent: () =>
+          import('./resource/account/profile/component').then(m => m.ProfileComponent)
       }
     ]
   }
+
 ];

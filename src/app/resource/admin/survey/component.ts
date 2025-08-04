@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { SidebarComponent } from '../../component/sidebar/component';
-import { HeaderComponent } from '../../component/header/component';
+
 
 @Component({
   selector: 'app-Survey',
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule,
-    SidebarComponent,
-    HeaderComponent
+    RouterModule
   ],
   templateUrl: './template.html',
   styleUrls: ['./style.css']

@@ -6,7 +6,7 @@ import { HeaderComponent } from '../../component/header/component';
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [CommonModule, SidebarComponent,HeaderComponent],
+  imports: [CommonModule],
   templateUrl: './template.html',
   styleUrls: ['./style.css']
 })

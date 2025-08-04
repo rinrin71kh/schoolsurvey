@@ -11,8 +11,6 @@ import { BorderlessLight } from 'survey-core/themes';
   standalone: true,
   imports: [
     CommonModule,
-    SidebarComponent,
-    HeaderComponent,
     SurveyModule
   ],
   templateUrl: './template.html',
