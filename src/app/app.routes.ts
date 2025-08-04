@@ -16,10 +16,25 @@ export const appRoutes: Routes = [
         loadComponent: () =>
           import('./resource/admin/user/component').then((m) => m.UserComponent)
       },
-      {
+           {
         path: 'survey',
-        loadComponent: () =>
-          import('./resource/admin/survey/component').then((m) => m.SurveyComponent)
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./resource/admin/survey/component').then(m => m.SurveyComponent)
+          },
+          {
+            path: 'create',
+            loadComponent: () =>
+              import('./resource/admin/survey/create/component').then(m => m.CreateSurveyComponent)
+          },
+          // {
+          //   path: 'view/:id',
+          //   loadComponent: () =>
+          //     import('./resource/admin/survey/view/component').then(m => m.ViewSurveyComponent)
+          // }
+        ]
       },
        {
         path: 'setting',

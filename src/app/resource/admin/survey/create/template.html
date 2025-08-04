@@ -1,0 +1,59 @@
+<div class="flex  min-h-screen overflow-y-auto">
+  <app-sidebar></app-sidebar>
+
+  <div class="flex-1 flex flex-col">
+    <app-header></app-header>
+    <main class="flex-1 p-6 bg-[#f8f9fa] text-gray-900 dark:bg-gray-800 dark:text-white min-h-screen">
+        <!-- Title -->
+        <input [(ngModel)]="surveyTitle"
+              class="text-2xl font-semibold p-2 border-b-2 border-gray-300 focus:outline-none focus:border-purple-500 w-full mb-6"
+              placeholder="Untitled Form" />
+
+        <!-- Questions -->
+        <div *ngFor="let q of questions; let i = index; trackBy: trackByIndex"
+            class="bg-white rounded-xl shadow-md p-6 mb-4">
+          <div class="flex justify-between items-center">
+            <strong class="text-lg">Question {{ i + 1 }}</strong>
+            <button (click)="removeQuestion(i)" class="text-red-600 hover:underline">Remove</button>
+          </div>
+
+          <input [(ngModel)]="q.title"
+                class="mt-3 mb-2 w-full p-2 border-b focus:outline-none focus:border-purple-500"
+                placeholder="Question title" />
+
+          <select [(ngModel)]="q.type"
+                  class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <option value="text">Short answer</option>
+            <option value="checkbox">Checkboxes</option>
+            <option value="radiogroup">Multiple choice</option>
+            <option value="dropdown">Dropdown</option>
+          </select>
+
+          <!-- Choices -->
+          <div *ngIf="q.type !== 'text'" class="mt-3 space-y-2">
+            <div *ngFor="let choice of q.choices; let j = index" class="flex items-center gap-2">
+              <input [(ngModel)]="choice.value"
+                    placeholder="Option {{ j + 1 }}"
+                    class="w-full p-2 border-b focus:outline-none focus:border-purple-500" />
+            </div>
+            <button (click)="addChoice(q)" class="text-blue-600 mt-2 hover:underline">+ Add Option</button>
+          </div>
+        </div>
+
+        <!-- Add Question -->
+        <button (click)="addQuestion()"
+                class="fixed bottom-8 right-8 bg-purple-600 text-white px-2 pb-1 rounded-full shadow-lg hover:bg-purple-700 text-xl">
+          +
+        </button>
+
+        <!-- Save Button -->
+        <div class="mt-8">
+          <button (click)="saveSurvey()"
+                  class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">
+            Save Survey
+          </button>
+        </div>
+    </main>
+
+  </div>
+</div>
