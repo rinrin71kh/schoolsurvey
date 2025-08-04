@@ -29,11 +29,12 @@ export const appRoutes: Routes = [
             loadComponent: () =>
               import('./resource/admin/survey/create/component').then(m => m.CreateSurveyComponent)
           },
-          // {
-          //   path: 'view/:id',
-          //   loadComponent: () =>
-          //     import('./resource/admin/survey/view/component').then(m => m.ViewSurveyComponent)
-          // }
+         {
+            path: 'view',
+            loadComponent: () =>
+              import('./resource/admin/survey/view/component').then(m => m.ViewSurveyComponent)
+          }
+
         ]
       },
        {

@@ -1,0 +1,5 @@
+/* survey.component.css */
+:host ::ng-deep .sv-root {
+  width: 100% !important;
+  max-width: none !important;
+}
