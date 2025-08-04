@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SidebarComponent } from '../../../component/sidebar/component';
-import { HeaderComponent } from '../../../component/header/component';
+
 
 @Component({
   selector: 'app-create-survey',
   standalone: true,
-  imports: [CommonModule, FormsModule, SidebarComponent, HeaderComponent],
+  imports: [CommonModule, FormsModule],
   templateUrl: './template.html',
   styleUrls: ['./style.css']
 })
