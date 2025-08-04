@@ -17,11 +17,14 @@
 
     <!-- User Dropdown -->
     <div class="relative" (click)="toggleUserMenu()">
-      <div class="flex items-center gap-2 cursor-pointer">
-        <img src="/img/544.jpg" alt="Avatar" class="w-8 h-8 rounded-full border border-white" />
+     <div class="flex items-center gap-2 cursor-pointer">
+        <img src="/img/544.jpg"
+            alt="Avatar"
+            class="w-10 h-10 object-cover rounded-full border-2 border-white shadow-sm" />
         <span class="font-medium">John Doe</span>
         <mat-icon>arrow_drop_down</mat-icon>
       </div>
+
 
       <!-- Dropdown -->
       <div *ngIf="userMenuOpen"

@@ -27,7 +27,7 @@ export class HeaderComponent {
   }
 
   viewProfile(): void {
-    this.router.navigate(['/admin/profile']); // Adjust if you have a different route
+    this.router.navigate(['/account/profile']); // Adjust if you have a different route
   }
   logout(): void {
     // Navigate to login
