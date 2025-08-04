@@ -1,37 +1,62 @@
-<nav class="h-screen w-64 bg-blue-700 text-white flex flex-col p-4">
-  <h2 class="text-xl font-bold mb-6 text-center">Survey System</h2>
-  <ul class="flex flex-col gap-4">
+<nav class="h-screen w-64 bg-[#235AA6] text-white flex flex-col p-4">
+  <h2 class="text-xl font-bold mb-6 text-left px-2">ADMIN</h2>
 
-    <li class="text-center">
-      <a routerLink="/admin/dashboard"
-         routerLinkActive="bg-blue-600"
-         [routerLinkActiveOptions]="{ exact: true }"
-         class="block px-2 py-1 rounded hover:bg-blue-600">
-        Dashboard
+  <ul class="flex flex-col gap-2">
+
+    <li>
+      <a
+        routerLink="/admin/dashboard"
+        routerLinkActive="bg-blue-600"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="flex items-center justify-between px-3 py-2 rounded hover:bg-blue-600"
+      >
+        <div class="flex items-center gap-2">
+          <mat-icon class="text-sm">dashboard</mat-icon>
+          <span>Dashboard</span>
+        </div>
+        <mat-icon class="text-sm">chevron_right</mat-icon>
       </a>
     </li>
 
-    <li class="text-center">
-      <a routerLink="/admin/user"
-         routerLinkActive="bg-blue-600"
-         class="block px-2 py-1 rounded hover:bg-blue-600">
-        Users
+    <li>
+      <a
+        routerLink="/admin/user"
+        routerLinkActive="bg-blue-600"
+        class="flex items-center justify-between px-3 py-2 rounded hover:bg-blue-600"
+      >
+        <div class="flex items-center gap-2">
+          <mat-icon class="text-sm">group</mat-icon>
+          <span>Users</span>
+        </div>
+        <mat-icon class="text-sm">chevron_right</mat-icon>
       </a>
     </li>
 
-    <li class="text-center">
-      <a routerLink="/admin/survey"
-         routerLinkActive="bg-blue-600"
-         class="block px-2 py-1 rounded hover:bg-blue-600">
-        Survey
+    <li>
+      <a
+        routerLink="/admin/survey"
+        routerLinkActive="bg-blue-600"
+        class="flex items-center justify-between px-3 py-2 rounded hover:bg-blue-600"
+      >
+        <div class="flex items-center gap-2">
+          <mat-icon class="text-sm">assessment</mat-icon>
+          <span>Survey</span>
+        </div>
+        <mat-icon class="text-sm">chevron_right</mat-icon>
       </a>
     </li>
 
-    <li class="text-center">
-      <a routerLink="/admin/setting"
-         routerLinkActive="bg-blue-600"
-         class="block px-2 py-1 rounded hover:bg-blue-600">
-        Settings
+    <li>
+      <a
+        routerLink="/admin/setting"
+        routerLinkActive="bg-blue-600"
+        class="flex items-center justify-between px-3 py-2 rounded hover:bg-blue-600"
+      >
+        <div class="flex items-center gap-2">
+          <mat-icon class="text-sm">settings</mat-icon>
+          <span>Settings</span>
+        </div>
+        <mat-icon class="text-sm">chevron_right</mat-icon>
       </a>
     </li>
 

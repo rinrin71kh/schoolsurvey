@@ -1,21 +1,36 @@
-<header class="flex items-center justify-between px-6 py-4 bg-white shadow dark:bg-gray-900">
-  <div class="text-lg font-semibold text-gray-800 dark:text-white">Welcome , User 1</div>
+<header class="flex items-center justify-between px-6 py-3 bg-[#235AA6] shadow text-white">
+  <!-- Left side -->
+  <div class="text-lg font-semibold"></div>
 
-  <div class="flex items-center gap-4">
-    <!-- Toggle Theme Button -->
-    <button (click)="toggleTheme()"
-            class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-      {{ isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode' }}
+  <!-- Right side -->
+  <div class="flex items-center gap-6 relative">
+    <!-- Notification -->
+    <button class="text-white hover:opacity-80">
+      <mat-icon>notifications</mat-icon>
     </button>
 
-    <!-- Account Info -->
-    <div class="text-sm text-gray-700 dark:text-gray-200">
-      Hello, <span class="font-medium">Admin</span>
+    <!-- Language -->
+    <!-- <button class="flex items-center gap-1">
+      <img src="/img/flag_kh.png" alt="Khmer" class="w-6 h-4 rounded-sm" />
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button> -->
+
+    <!-- User Dropdown -->
+    <div class="relative" (click)="toggleUserMenu()">
+      <div class="flex items-center gap-2 cursor-pointer">
+        <img src="/img/544.jpg" alt="Avatar" class="w-8 h-8 rounded-full border border-white" />
+        <span class="font-medium">John Doe</span>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </div>
+
+      <!-- Dropdown -->
+      <div *ngIf="userMenuOpen"
+           class="absolute right-0 mt-2 w-36 bg-white text-black rounded shadow-md z-50">
+        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                (click)="viewProfile()">Profile</button>
+        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600"
+                (click)="logout()">Logout</button>
+      </div>
     </div>
-
-    <!-- Logout -->
-    <button (click)="logout()" class="text-red-600 hover:underline text-sm">
-      Logout
-    </button>
   </div>
 </header>
