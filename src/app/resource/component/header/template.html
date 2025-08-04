@@ -28,12 +28,22 @@
 
       <!-- Dropdown -->
       <div *ngIf="userMenuOpen"
-           class="absolute right-0 mt-2 w-36 bg-white text-black rounded shadow-md z-50">
-        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100"
-                (click)="viewProfile()">Profile</button>
-        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600"
-                (click)="logout()">Logout</button>
-      </div>
+      class="absolute right-0 mt-2 w-36 bg-white text-black rounded shadow-md z-50">
+      
+      <button class="flex items-center gap-2 w-full text-left px-4 py-2 hover:bg-gray-100"
+              (click)="viewProfile()">
+        <mat-icon class="text-sm">person</mat-icon>
+        Profile
+      </button>
+
+      <button class="flex items-center gap-2 w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600"
+              (click)="logout()">
+        <mat-icon class="text-sm">logout</mat-icon>
+        Logout
+      </button>
+
+    </div>
+
     </div>
   </div>
 </header>
