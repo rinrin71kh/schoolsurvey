@@ -2,7 +2,17 @@ import { Routes } from '@angular/router';
 
 export const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', loadComponent: () => import('../app/resource/auth/login/component').then(m => m.LoginComponent) },
+  { path: 'login', loadComponent: () => import('./resource/account/auth/login/component').then(m => m.LoginComponent) },
+  {
+    path: 'account',
+    children: [
+      {
+        path: 'profile',
+        loadComponent: () =>
+          import('./resource/account/profile/component').then(m => m.ProfileComponent)
+      }
+    ]
+  },
   {
     path: 'admin',
     children: [

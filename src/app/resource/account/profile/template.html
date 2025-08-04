@@ -1,0 +1,47 @@
+<section class="min-h-screen bg-gray-100 flex items-center justify-center w-full h-full">
+  <div class="bg-white rounded-2xl shadow-lg flex w-full max-w-4xl overflow-hidden min-h-[500px]">
+
+    <!-- Avatar Side -->
+    <div class="hidden lg:flex lg:w-2/5 items-center justify-center bg-blue-50">
+      <img src="/img/544.jpg"
+           alt="Profile Image"
+           class="h-40 w-40 object-cover rounded-full border-4 border-white shadow-lg">
+    </div>
+
+    <!-- Info Side -->
+    <div class="w-full p-8 lg:w-3/5">
+      <h2 class="text-2xl font-semibold mb-6 text-center">User Profile</h2>
+
+      <div class="space-y-4 mb-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Full Name</label>
+          <div class="px-4 py-2 border rounded-lg bg-gray-100">John Doe</div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <div class="px-4 py-2 border rounded-lg bg-gray-100">john.doegmail.com</div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+          <div class="px-4 py-2 border rounded-lg bg-gray-100">0123456789</div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Role</label>
+          <div class="px-4 py-2 border rounded-lg bg-gray-100">Admin</div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button
+          (click)="goBack()"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+        >
+          ← Exit
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
