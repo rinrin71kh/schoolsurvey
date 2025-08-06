@@ -90,5 +90,12 @@
   },
   "cli": {
     "analytics": "b415795d-e38d-4b8b-ad4d-a560d7210626"
+  },
+  "fileReplacements": [
+  {
+    "replace": "src/environments/environment.ts",
+    "with": "src/environments/environment.prod.ts"
   }
+]
+
 }
